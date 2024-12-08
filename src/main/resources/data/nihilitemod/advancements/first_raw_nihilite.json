@@ -1,0 +1,31 @@
+{
+  "display": {
+    "title": {
+      "text": "Raw Discovery"
+    },
+    "description": {
+      "text": "Obtain your first Raw Nihilite."
+    },
+    "icon": {
+      "item": "nihilitemod:raw_nihilite"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_raw_nihilite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:raw_nihilite"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

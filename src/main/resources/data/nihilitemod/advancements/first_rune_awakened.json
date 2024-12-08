@@ -1,0 +1,39 @@
+{
+  "display": {
+    "title": {
+      "text": "Awakened Power"
+    },
+    "description": {
+      "text": "Awaken your first Rune."
+    },
+    "icon": {
+      "item": "nihilitemod:rune_of_swiftness"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "awaken_any_rune": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:rune_of_swiftness",
+              "nihilitemod:rune_of_haste",
+              "nihilitemod:rune_of_strength",
+              "nihilitemod:rune_of_leaping",
+              "nihilitemod:rune_of_luck",
+              "nihilitemod:rune_of_feather",
+              "nihilitemod:rune_of_endurance",
+              "nihilitemod:rune_of_night_vision"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "nihilitemod:first_nihilite"
+}

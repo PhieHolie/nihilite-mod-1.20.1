@@ -1,8 +1,8 @@
-package net.phie.tutorialmod;
+package net.phie.nihilitemod;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class TutorialModClient  implements ClientModInitializer {
+public class NihiliteModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 

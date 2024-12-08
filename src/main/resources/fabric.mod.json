@@ -1,40 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "tutorialmod",
-	"version": "${version}",
-	"name": "Tutorial Mod Phie",
-	"description": "This is a mod by Phie",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/tutorialmod/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.phie.tutorialmod.TutorialMod"
-		],
-		"client": [
-			"net.phie.tutorialmod.TutorialModClient"
-		],
-		"fabric-datagen": [
-			"net.phie.tutorialmod.TutorialModDataGenerator"
-		]
-	},
-	"mixins": [
-		"tutorialmod.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "nihilitemod",
+  "version": "${version}",
+  "name": "Nihilite Mod",
+  "description": "New end-game Nihilite ore and more!",
+  "authors": [
+    "Phie"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/nihilitemod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.phie.nihilitemod.NihiliteMod"
+    ],
+    "client": [
+      "net.phie.nihilitemod.NihiliteModClient"
+    ],
+    "fabric-datagen": [
+      "net.phie.nihilitemod.NihiliteModDataGenerator"
+    ]
+  },
+  "mixins": [
+    "nihilitemod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }

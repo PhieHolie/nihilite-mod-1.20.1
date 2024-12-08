@@ -1,0 +1,38 @@
+{
+  "display": {
+    "title": {
+      "text": "Unearthed Potential"
+    },
+    "description": {
+      "text": "Obtain your first Sleeping Rune from a drop."
+    },
+    "icon": {
+      "item": "nihilitemod:sleeping_rune_of_swiftness"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_sleeping_rune": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:sleeping_rune_of_swiftness",
+              "nihilitemod:sleeping_rune_of_haste",
+              "nihilitemod:sleeping_rune_of_strength",
+              "nihilitemod:sleeping_rune_of_leaping",
+              "nihilitemod:sleeping_rune_of_luck",
+              "nihilitemod:sleeping_rune_of_feather",
+              "nihilitemod:sleeping_rune_of_endurance",
+              "nihilitemod:sleeping_rune_of_night_vision"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

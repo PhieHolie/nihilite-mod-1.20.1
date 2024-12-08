@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "Refined Power"
+    },
+    "description": {
+      "text": "Obtain your first Nihilite."
+    },
+    "icon": {
+      "item": "nihilitemod:nihilite"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_nihilite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:nihilite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "nihilitemod:first_raw_nihilite"
+}

@@ -1,0 +1,47 @@
+{
+  "display": {
+    "title": {
+      "text": "Fully Armored"
+    },
+    "description": {
+      "text": "Equip a full set of Nihilite armor."
+    },
+    "icon": {
+      "item": "nihilitemod:nihilite_chestplate"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "equip_nihilite_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:nihilite_helmet"
+            ]
+          },
+          {
+            "items": [
+              "nihilitemod:nihilite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "nihilitemod:nihilite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "nihilitemod:nihilite_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "nihilitemod:first_nihilite"
+}

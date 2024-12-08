@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "text": "The Strongest Block"
+    },
+    "description": {
+      "text": "Obtain your first Nihilite Block."
+    },
+    "icon": {
+      "item": "nihilitemod:nihilite_block"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_nihilite_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nihilitemod:nihilite_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "nihilitemod:first_nihilite"
+}
