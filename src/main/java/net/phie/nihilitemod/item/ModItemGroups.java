@@ -47,6 +47,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.NIHILITE_BLOCK);
                         entries.add(ModBlocks.RAW_NIHILITE_BLOCK);
+                        entries.add(ModBlocks.PURE_NIHILITE_BLOCK);
                     }).build());
 
     public static void registerItemGroups() {

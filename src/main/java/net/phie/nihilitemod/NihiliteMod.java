@@ -2,6 +2,7 @@ package net.phie.nihilitemod;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,6 +20,8 @@ import net.phie.nihilitemod.event.TooltipHandler;
 import net.phie.nihilitemod.item.ModItemGroups;
 import net.phie.nihilitemod.item.ModItems;
 import net.phie.nihilitemod.loot.GlobalLootModifier;
+import net.phie.nihilitemod.world.PeriodicSpawner;
+import net.phie.nihilitemod.world.WantedLevelManager;
 import net.phie.nihilitemod.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,15 +37,24 @@ public class NihiliteMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("Nihilite Mod Initializing...");
+
         // Initialize mod components
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
-        ModWorldGeneration.generateModWorldGen();
         GlobalLootModifier.register();
         RunesHandler.register();
         PlayerHungerHandler.register();
-        TooltipHandler.register();
+        ModWorldGeneration.generateModWorldGen();
+
+        CustomPortalBuilder.beginPortal().frameBlock(ModBlocks.PURE_NIHILITE_BLOCK)
+                .lightWithItem(ModItems.NIHILITE_SWORD)
+                .destDimID(new Identifier(NihiliteMod.MOD_ID, "phiedim"))
+                .tintColor(5, 5, 5)
+                .registerPortal();
+
+        WantedLevelManager.register();
 
         LOGGER.info("Nihilite Mod Initialized!");
 

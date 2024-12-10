@@ -25,6 +25,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.NIHILITE_BLOCK);
+        addDrop(ModBlocks.PURE_NIHILITE_BLOCK);
 
         addDrop(ModBlocks.RAW_NIHILITE_BLOCK, copperLikeOreDrops(ModBlocks.RAW_NIHILITE_BLOCK, ModItems.RAW_NIHILITE));
     }

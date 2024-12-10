@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NIHILITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_NIHILITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURE_NIHILITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPAWNABLE_OBSIDIAN_BLOCK);
     }
 
     @Override

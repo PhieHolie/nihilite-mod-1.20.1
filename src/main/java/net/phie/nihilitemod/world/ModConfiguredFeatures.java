@@ -18,14 +18,19 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_NIHILITE_ORE_KEY = registerKey("end_nihilite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> VOID_NIHILITE_ORE_KEY = registerKey("void_nihilite_ore");
 
-    public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest endReplacables = new BlockMatchRuleTest(Blocks.END_STONE);
+        RuleTest voidReplacables = new BlockMatchRuleTest(Blocks.CRYING_OBSIDIAN);
 
         List<OreFeatureConfig.Target> endNihiliteOres =
                 List.of(OreFeatureConfig.createTarget(endReplacables, ModBlocks.RAW_NIHILITE_BLOCK.getDefaultState()));
+        List<OreFeatureConfig.Target> voidNihiliteOres =
+                List.of(OreFeatureConfig.createTarget(voidReplacables, ModBlocks.RAW_NIHILITE_BLOCK.getDefaultState()));
 
-        register(context, END_NIHILITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNihiliteOres, 12));
+        register(context, END_NIHILITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endNihiliteOres, 6));
+        register(context, VOID_NIHILITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(voidNihiliteOres, 12));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

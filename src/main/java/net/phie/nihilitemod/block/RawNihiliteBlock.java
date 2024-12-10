@@ -14,6 +14,8 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import net.minecraft.item.ToolItem;
+import net.minecraft.item.ToolMaterials;
 
 public class RawNihiliteBlock extends ExperienceDroppingBlock {
     public RawNihiliteBlock(Settings settings) {
@@ -24,10 +26,29 @@ public class RawNihiliteBlock extends ExperienceDroppingBlock {
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack itemStack) {
         super.afterBreak(world, player, pos, state, blockEntity, itemStack);
         if (!world.isClient && world instanceof ServerWorld serverWorld) {
-            spawnEndermites(serverWorld, pos, player, 0, 3); // Spawn 0 to 3 Endermites targeting the player
-            trySpawnEnderman(serverWorld, pos, player); // Rare chance to spawn an Enderman
+            // spawnEndermites(serverWorld, pos, player, 0, 3); // Spawn 0 to 3 Endermites targeting the player
+            // trySpawnEnderman(serverWorld, pos, player); // Rare chance to spawn an Enderman
         }
     }
+
+    @Override
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        // Custom logic for breaking the block
+        if (!world.isClient) {
+            ItemStack stack = player.getMainHandStack(); // Get the tool the player is holding
+            if (stack.getItem() instanceof ToolItem toolItem) {
+                if (toolItem.getMaterial() != ToolMaterials.NETHERITE) {
+                    // Prevent breaking and reset the block
+                    world.setBlockState(pos, state);
+                    return;
+                }
+            }
+        }
+
+        // Call the superclass method if conditions are met
+        super.onBreak(world, pos, state, player);
+    }
+
 
     private void spawnEndermites(ServerWorld world, BlockPos pos, PlayerEntity player, int min, int max) {
         Random random = world.getRandom();

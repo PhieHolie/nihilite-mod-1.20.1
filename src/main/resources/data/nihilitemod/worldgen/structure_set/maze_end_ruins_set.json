@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "nihilitemod:small_end_ruins",
+      "structure": "nihilitemod:maze_end_ruins",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 20,
-    "separation": 10,
-    "salt": 987654321
+    "spacing": 30,
+    "separation": 15,
+    "salt": 123456789
   }
 }

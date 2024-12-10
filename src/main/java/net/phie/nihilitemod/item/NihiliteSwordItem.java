@@ -113,6 +113,7 @@ public class NihiliteSwordItem extends SwordItem {
                 entity.getType() == EntityType.VINDICATOR ||
                 entity.getType() == EntityType.VEX ||
                 entity.getType() == EntityType.GUARDIAN ||
+                entity.getType() == EntityType.ENDER_DRAGON ||
                 entity.getType() == EntityType.ELDER_GUARDIAN;
     }
 
